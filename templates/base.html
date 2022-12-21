@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <title> {% block title %}{% endblock title %} OEM SYSTEM</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@600&display=swap');
+
+        body,
+        html {
+            height: 100%;
+            /* The image used */
+            background-image: url("/static/officebg.jpg");
+
+            /* Full height */
+            height: 100%;
+
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-repeat: repeat-y;
+
+        }
+
+        .dropdown {
+            margin: 30px;
+            padding: 20px;
+            left: -230px;
+            position: relative;
+        }
+
+        .container {
+
+            text-align: center;
+            padding: 10px;
+        }
+
+        a {
+            margin: 3px;
+
+        }
+
+        table {
+
+            margin-top: 20px;
+            font-family: 'IBM Plex Serif', serif;
+        }
+
+        table,
+        th,
+        td {
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+
+        h1 {
+            font-family: 'IBM Plex Serif', serif;
+        }
+
+        h3 {
+
+            margin-top: 80px;
+            font-family: 'IBM Plex Serif', serif;
+        }
+
+        label,
+        input {
+
+            font-weight: bold;
+
+
+        }
+
+
+
+
+        .footer {
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="mainbody">
+            {% block body %}{% endblock body %}
+            <marquee behavior="alternate" direction="left"scrollamount='2'>
+                <h1 class="text-warning fw-bold">OFFICE EMPLOYEE MANGAEMENT SYSTEM</h1><br>
+            </marquee>
+
+            <marquee behavior="alternate" direction="left"scrollamount='2'>
+
+                <a href=" /" role="button"> <button type="button" class="btn btn-outline-warning">Home</button></a>
+                <a href="/all_emp" role="button"><button type="button" class="btn btn-outline-warning">View All
+                        Employee</button></a>
+                <a href="/add_emp" role="button"><button type="button" class="btn btn-outline-warning">Add an
+                        Employee</button></a>
+                <a href="/remove_emp" role="button"> <button type="button" class="btn btn-outline-warning">Remove an
+                        Employee</button></a>
+                <a href="/filter_emp" role="button"> <button type="button" class="btn btn-outline-warning">Filter an
+                        Employee</button></a>
+            </marquee>
+
+
+
+
+
+        </div>
+        <div class="subbody">
+            {% block subbody %}
+
+
+            {% endblock subbody %}
+
+
+        </div>
+
+    </div>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+    <footer>
+
+        {% block footer %}
+        <!-- Footer -->
+        <footer class="page-footer font-small blue bg-warning">
+
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3">© 2020 Copyright:
+                <a href="/"> OEMSYSTEMS.com</a>
+            </div>
+            <!-- Copyright -->
+
+        </footer>
+        <!-- Footer -->
+        {% endblock footer %}
+
+    </footer>
+</body>
+
+
+
+
+</html>

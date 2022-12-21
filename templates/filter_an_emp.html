@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}Filter an Employee{% endblock title %}
+
+{% block body %} {% endblock body %}
+{% block subbody %}
+<h3 class=text-warning bg-primary>Filter Employee Details</h3>
+<form action="/filter_emp" method="post">
+    {% csrf_token %}
+    <div class="filter_emp" style="text-align: left;">
+        <div class="row">
+            <div class="col mb-3 text-warning">
+                <label for="name" class="name">Enter First Name/Last Name</label>
+                <input type="text" class="form-control" placeholder="First name / Last name" name="name"
+                    value="{{name}}" aria-label="Name">
+
+            </div>
+
+            <div class="mb-3 text-warning">
+                <label for="department" class="dept">Enter Department</label>
+                <input type="text" class="form-control" id="dept" name="dept" value="{{dept}}"
+                    placeholder="Enter Department">
+            </div>
+            <div class="mb-3 text-warning">
+                <label for="role" class="role">Enter Role</label>
+                <input type="text" class="form-control" id="role" name="role" value="{{role}}" placeholder="Enter Role">
+            </div>
+
+            <div class="btn " style="text-align:left">
+                <button type="submit" class="btn btn-warning">Submit</button>
+            </div>
+            <br><br><br><br><br><br><br>
+
+
+
+        </div>
+    </div>
+</form>
+
+{% endblock subbody %}

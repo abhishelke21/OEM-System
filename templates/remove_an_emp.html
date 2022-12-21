@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %} Remove an Employee{% endblock title %}
+
+{% block body %} {% endblock body %}
+{% block subbody %}
+
+
+<div class="dropdown">
+    <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Choose Employee To be Removed
+    </button>
+    <div class="dropdown-menu">
+        {% for emp in emps %}
+        <a class="dropdown-item" href="/remove_emp/{{emp.id}}">{{emp.first_name}} {{emp.last_name}}</a>
+        {% endfor %}
+       
+        
+      </div>
+  </div>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        
+ 
+
+
+
+{% endblock subbody %}
